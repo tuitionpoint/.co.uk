@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KS1–KS4 Tuition in London | GCSE, SATs & Primary Tutors – Tuition Point</title>
+  <meta name="description" content="Expert KS1, KS2, KS3 & KS4 tuition in London. GCSE tutors, SATs prep, 11+ support, and personalised one-to-one learning for ages 5–16. Book a free consultation.">
+  <style>
+    /* ===== Base & Reset ===== */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #1a1a1a;
+      background: #fff;
+    }
+    a {
+      text-decoration: none;
+      color: #0056b3;
+      transition: color 0.2s;
+    }
+    a:hover {
+      color: #003d82;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .container {
+      width: 90%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 15px;
+    }
+    section {
+      padding: 70px 0;
+    }
+    h1, h2, h3, h4 {
+      margin-bottom: 20px;
+      line-height: 1.3;
+    }
+    p {
+      margin-bottom: 15px;
+    }
+    ul {
+      padding-left: 20px;
+      margin-bottom: 20px;
+    }
+    .btn {
+      display: inline-block;
+      background: #0056b3;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-top: 15px;
+      pointer-events: none;
+      cursor: default;
+    }
+
+    /* ===== Header (UX Only) ===== */
+    header {
+      background: white;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .navbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 0;
+    }
+    .logo {
+      font-size: 26px;
+      font-weight: 700;
+      color: #0056b3;
+    }
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+    .nav-links a {
+      font-weight: 500;
+      color: #1a1a1a;
+      pointer-events: none;
+      cursor: default;
+    }
+    .mobile-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* ===== Hero ===== */
+    .hero {
+      background: url('https://tuitionpoint.co.uk/wp-content/uploads/2025/09/daily-lifestyle-of-caucasian-family-shoot-2025-02-10-12-39-57-utc-2048x2048.jpg') center/cover no-repeat;
+      padding: 120px 0;
+      color: white;
+      text-align: center;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0, 86, 179, 0.65);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .hero h1 {
+      font-size: 2.6rem;
+    }
+
+    /* ===== Services Grid ===== */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
+    }
+    .service-card {
+      border: 1px solid #eaeaea;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    .service-card:hover {
+      transform: translateY(-5px);
+    }
+    .service-image {
+      height: 180px;
+      overflow: hidden;
+    }
+    .service-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+    .service-content {
+      padding: 25px;
+    }
+    .service-content h3 a {
+      color: #0056b3;
+      font-size: 1.4rem;
+      display: block;
+    }
+    .service-content ul {
+      padding-left: 15px;
+      margin-top: 10px;
+    }
+    .service-content li {
+      margin-bottom: 8px;
+      font-size: 0.95rem;
+    }
+
+    /* ===== Footer ===== */
+    footer {
+      background: #0a192f;
+      color: #cbd6e6;
+      padding: 50px 0 20px;
+    }
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      margin-bottom: 30px;
+    }
+    .footer-col h4 {
+      color: white;
+      margin-bottom: 20px;
+    }
+    .footer-col ul {
+      list-style: none;
+      padding: 0;
+    }
+    .footer-col ul li {
+      margin-bottom: 10px;
+    }
+    .footer-col a {
+      color: #a0aec0;
+    }
+    .footer-col a:hover {
+      color: #63b3ed;
+    }
+    .contact-info p {
+      margin-bottom: 8px;
+      display: flex;
+      align-items: flex-start;
+    }
+    .contact-info span:first-child {
+      min-width: 80px;
+      color: #63b3ed;
+    }
+    .map-link {
+      color: #63b3ed;
+      text-decoration: underline;
+    }
+    .copyright {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid #2d3748;
+      color: #a0aec0;
+      font-size: 0.9rem;
+    }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 768px) {
+      .mobile-toggle { display: block; }
+      .nav-links {
+        position: absolute;
+        top: 70px;
+        left: 0; right: 0;
+        background: white;
+        flex-direction: column;
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+        display: none;
+      }
+      .nav-links.show { display: flex; }
+      .hero h1 { font-size: 2rem; }
+      section { padding: 50px 0; }
+      .footer-content {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header – UX Only -->
+  <header>
+    <div class="container">
+      <nav class="navbar">
+        <div class="logo">Tuition Point</div>
+        <div class="mobile-toggle" onclick="toggleMenu()">☰</div>
+        <ul class="nav-links" id="navLinks">
+          <li><a>Home</a></li>
+          <li><a>KS1</a></li>
+          <li><a>KS2</a></li>
+          <li><a>KS3</a></li>
+          <li><a>KS4</a></li>
+          <li><a>Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>KS1–KS4 Tuition in London | GCSE, SATs & Primary Tutors</h1>
+      <p>Personalised one-to-one and small-group tuition for ages 5–16 across London, Buckinghamshire & the UK.</p>
+      <div class="btn">Book Free Consultation</div>
+    </div>
+  </section>
+
+  <!-- Intro with Interlinking -->
+  <section>
+    <div class="container">
+      <h2>Tutoring for Every Key Stage in London</h2>
+      <p>
+        At <a href="https://tuitionpoint.co.uk/"><strong>tuitionpoint</strong></a>, we offer expert, curriculum-aligned support across all Key Stages. Whether your child is just starting school or preparing for GCSEs, our tailored tuition builds confidence and academic success. Explore our specialised services:
+      </p>
+
+      <div class="services-grid">
+        <!-- KS1 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://tuitionpoint.co.uk/wp-content/uploads/2025/10/ks1-tutor.png" alt="KS1 Tuition London – Primary Tutoring for Ages 5–7">
+          </div>
+          <div class="service-content">
+            <h3><a href="https://tuitionpoint.co.uk/london-tuition/key-stage-1/">Key Stage 1 (Ages 5–7)</a></h3>
+            <p>Build foundational literacy, numeracy, and confidence in Years 1–2.</p>
+            <ul>
+              <li>Phonics & reading fluency</li>
+              <li>Sentence writing & spelling</li>
+              <li>Number bonds & basic maths</li>
+              <li>Play-based, engaging lessons</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- KS2 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://tuitionpoint.co.uk/wp-content/uploads/2021/10/raising-hand-min-scaled-1.jpeg" alt="KS2 Tuition London – SATs & 11+ Prep for Ages 7–11">
+          </div>
+          <div class="service-content">
+            <h3><a href="https://tuitionpoint.co.uk/london-tuition/key-stage-2/">Key Stage 2 (Ages 7–11)</a></h3>
+            <p>Strengthen skills for SATs, 11+, and secondary transition.</p>
+            <ul>
+              <li>Comprehension & grammar</li>
+              <li>Fractions, decimals, problem-solving</li>
+              <li>Science investigations</li>
+              <li>SATs & 11+ exam prep</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- KS3 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://tuitionpoint.co.uk/wp-content/uploads/2021/10/raising-hand-min-scaled-1.jpeg" alt="KS3 Tuition London – Secondary School Support Ages 11–14">
+          </div>
+          <div class="service-content">
+            <h3><a href="https://tuitionpoint.co.uk/london-tuition/key-stage-3/">Key Stage 3 (Ages 11–14)</a></h3>
+            <p>Bridge to GCSEs with deeper subject mastery in Years 7–9.</p>
+            <ul>
+              <li>Essay writing & analysis</li>
+              <li>Algebra, geometry, reasoning</li>
+              <li>Scientific method & labs</li>
+              <li>Study skills & independence</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- KS4 -->
+        <div class="service-card">
+          <div class="service-image">
+            <img src="https://tuitionpoint.co.uk/wp-content/uploads/2021/10/raising-hand-min-scaled-1.jpeg" alt="KS4 Tuition London – GCSE Tutors for Ages 14–16">
+          </div>
+          <div class="service-content">
+            <h3><a href="https://tuitionpoint.co.uk/london-tuition/key-stage-4/">Key Stage 4 (Ages 14–16)</a></h3>
+            <p>GCSE exam success through targeted revision and expert coaching.</p>
+            <ul>
+              <li>Past paper practice</li>
+              <li>Exam technique (AQA, Edexcel, OCR)</li>
+              <li>Subject mastery in English, Maths, Science</li>
+              <li>Stress management & confidence</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="background: #eef5ff; text-align: center;">
+    <div class="container">
+      <h2>Start Your Child’s Tuition Journey Today</h2>
+      <p>Book a free consultation with expert tutors in London for KS1, KS2, KS3 or KS4.</p>
+      <div class="btn">Book Free Consultation</div>
+    </div>
+  </section>
+
+  <!-- Footer with Full Contact Info -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-col">
+          <h4>Tuition Point</h4>
+          <p>Personalised tuition in London & Buckinghamshire for Key Stages 1 to 4.</p>
+          <div class="contact-info">
+            <p><span>Email:</span> <a href="mailto:info@tuitionpoint.co.uk">info@tuitionpoint.co.uk</a></p>
+            <p><span>Phone:</span> <a href="tel:+442035764820">+44 2035764820</a></p>
+            <p><span>Address:</span> 124 City Road, London, EC1V 2NX</p>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Opening Hours</h4>
+          <ul>
+            <li>Monday–Friday: 14:30–22:00</li>
+            <li>Saturday: 08:00–22:00</li>
+            <li>Sunday: 09:00–18:00</li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Locations</h4>
+          <ul>
+            <li><a class="map-link" href="https://www.google.com/maps/place/London,+UK/@51.528642,-0.101599,10z/data=!4m6!3m5!1s0x47d8a00baf21de75:0x52963a5addd52a99!8m2!3d51.5072178!4d-0.1275862!16zL20vMDRqcGw?hl=en&entry=ttu&g_ep=EgoyMDI1MTAxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">London, UK</a></li>
+            <li><a class="map-link" href="https://www.google.com/maps?ll=51.840896,-0.808695&z=9&t=m&hl=en&gl=US&mapclient=embed&q=Buckinghamshire+United+Kingdom" target="_blank">Buckinghamshire, UK</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="copyright">
+        &copy; 2025 Tuition Point. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('show');
+    }
+  </script>
+
+</body>
+</html>
